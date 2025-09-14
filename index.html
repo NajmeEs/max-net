@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مکس نت - پلتفرم پیشرفته دیجیتال مارکتینگ و استخراج ابری</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle ml-2"></i>
+        <span id="notificationText">درخواست شما با موفقیت ارسال شد!</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-3xl font-black gradient-text floating">مکس نت</div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav flex items-center space-x-8 space-x-reverse">
+                    <a href="#" onclick="showPage('home')" class="nav-link active">
+                        <i class="fas fa-home ml-2"></i>خانه
+                    </a>
+                    <a href="#" onclick="showPage('services')" class="nav-link">
+                        <i class="fas fa-cogs ml-2"></i>خدمات
+                    </a>
+                    <a href="#" onclick="showPage('mining')" class="nav-link">
+                        <i class="fas fa-coins ml-2"></i>استخراج ابری
+                    </a>
+                    <a href="#" onclick="showPage('dashboard')" class="nav-link">
+                        <i class="fas fa-chart-line ml-2"></i>داشبورد
+                    </a>
+                    <a href="#" onclick="showPage('contact')" class="nav-link">
+                        <i class="fas fa-phone ml-2"></i>تماس
+                    </a>
+                </div>
+                
+                <!-- Mobile Hamburger -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#" onclick="showPage('home')" class="mobile-nav-item">
+            <i class="fas fa-home ml-3"></i>خانه
+        </a>
+        <a href="#" onclick="showPage('services')" class="mobile-nav-item">
+            <i class="fas fa-cogs ml-3"></i>خدمات
+        </a>
+        <a href="#" onclick="showPage('mining')" class="mobile-nav-item">
+            <i class="fas fa-coins ml-3"></i>استخراج ابری
+        </a>
+        <a href="#" onclick="showPage('dashboard')" class="mobile-nav-item">
+            <i class="fas fa-chart-line ml-3"></i>داشبورد
+        </a>
+        <a href="#" onclick="showPage('contact')" class="mobile-nav-item">
+            <i class="fas fa-phone ml-3"></i>تماس
+        </a>
+    </div>
+
+    <!-- Page 1: Home -->
+    <div id="home-page" class="page active hero-bg" style="padding-top: 80px;">
+        <div class="container mx-auto px-6 text-center py-20">
+            <div class="max-w-6xl mx-auto">
+                <h1 class="text-6xl md:text-8xl font-black mb-8 gradient-text floating fade-in-up">مکس نت</h1>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-white slide-in-right">پلتفرم پیشرفته دیجیتال مارکتینگ</h2>
+                <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed max-w-4xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                    با بیش از 5 سال تجربه در زمینه دیجیتال مارکتینگ، طراحی سایت، اپلیکیشن موبایل و استخراج ابری کریپتوکارنسی، ما بهترین راه‌حل‌های کسب درآمد آنلاین را ارائه می‌دهیم.
+                </p>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="netflix-card p-6">
+                        <i class="fas fa-users text-4xl text-blue-400 mb-4"></i>
+                        <div class="stats-counter" id="clients">5000+</div>
+                        <p class="text-lg">مشتری راضی</p>
+                    </div>
+                    <div class="netflix-card p-6">
+                        <i class="fas fa-project-diagram text-4xl text-green-400 mb-4"></i>
+                        <div class="stats-counter" id="projects">12000+</div>
+                        <p class="text-lg">پروژه موفق</p>
+                    </div>
+                    <div class="netflix-card p-6">
+                        <i class="fas fa-money-bill-wave text-4xl text-yellow-400 mb-4"></i>
+                        <div class="stats-counter" id="income">850M+</div>
+                        <p class="text-lg">درآمد تولید شده</p>
+                    </div>
+                    <div class="netflix-card p-6">
+                        <i class="fas fa-award text-4xl text-purple-400 mb-4"></i>
+                        <div class="stats-counter" id="years">5+</div>
+                        <p class="text-lg">سال تجربه</p>
+                    </div>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col md:flex-row gap-6 justify-center mb-16 fade-in-up" style="animation-delay: 0.6s;">
+                    <button onclick="showPage('services')" class="btn-primary text-2xl font-bold pulse-glow px-12 py-4">
+                        <i class="fas fa-rocket ml-3"></i>همین حالا شروع کنید
+                    </button>
+                    <button class="btn-secondary text-2xl font-bold px-12 py-4">
+                        <i class="fas fa-play ml-3"></i>مشاهده ویدیو معرفی
+                    </button>
+                </div>
+
+                <!-- Success Stories -->
+                <div class="netflix-card p-8 fade-in-up" style="animation-delay: 0.8s;">
+                    <h3 class="text-3xl font-bold mb-6 gradient-text">داستان‌های موفقیت</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="service-icon bg-green-500 text-white mb-4">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">فروشگاه آنلاین محمد</h4>
+                            <p class="text-gray-300">از 10 میلیون به 500 میلیون تومان فروش ماهانه</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="service-icon bg-blue-500 text-white mb-4">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">آموزشگاه آنلاین سارا</h4>
+                            <p class="text-gray-300">از 0 به 50,000 دانشجو در یک سال</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="service-icon bg-yellow-500 text-white mb-4">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h4 class="text-xl font-bold mb-2">سرمایه‌گذار علی</h4>
+                            <p class="text-gray-300">درآمد ماهانه 200 میلیون از استخراج ابری</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: Services -->
+    <div id="services-page" class="page marketing-bg" style="padding-top: 80px;">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-20 fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-black gradient-text mb-8">خدمات دیجیتال مارکتینگ</h2>
+                <p class="text-xl text-gray-200 max-w-4xl mx-auto mb-8">
+                    با استفاده از جدیدترین تکنولوژی‌ها و استراتژی‌های بازاریابی، کسب‌وکار شما را به اوج موفقیت برسانید
+                </p>
+                
+                <!-- Loan Information Banner -->
+                <div class="netflix-card p-6 mb-8">
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">
+                        <i class="fas fa-credit-card ml-2"></i>
+                        امکان پرداخت اقساطی
+                    </h3>
+                    <p class="text-lg text-gray-200 mb-4">
+                        هنگام رزرو خدمات، وام بدون بهره با امکان تسویه در 24 یا 36 ماه در اختیار شماست
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-green-600 px-4 py-2 rounded-full text-sm">✓ بدون بهره</span>
+                        <span class="bg-blue-600 px-4 py-2 rounded-full text-sm">✓ تایید فوری</span>
+                        <span class="bg-purple-600 px-4 py-2 rounded-full text-sm">✓ بدون ضامن</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Instagram Marketing -->
+                <div class="netflix-card p-8 fade-in-up">
+                    <div class="service-icon mb-6">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">تبلیغات اینستاگرام</h3>
+                    <p class="text-gray-300 mb-6">تبلیغات هدفمند و حرفه‌ای در اینستاگرام برای افزایش فروش و آگاهی برند شما</p>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">6,000,000 تومان</div>
+                        <div class="text-sm text-blue-400">یا 24 قسط 280,000 تومانی</div>
+                    </div>
+                    
+                    <ul class="text-sm text-gray-300 mb-8 space-y-2">
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>تولید محتوای خلاقانه روزانه</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>تارگت‌گیری دقیق مخاطب</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>گزارش‌دهی مفصل هفتگی</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>مدیریت کامنت و DM</li>
+                    </ul>
+                    <button class="btn-primary w-full py-3 font-bold" onclick="showLoanOptions('instagram', 6000000)">
+                        <i class="fas fa-shopping-cart ml-2"></i>انتخاب و رزرو
+                    </button>
+                </div>
+                
+                <!-- Website Design -->
+                <div class="netflix-card p-8 fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="service-icon mb-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">طراحی سایت</h3>
+                    <p class="text-gray-300 mb-6">طراحی و توسعه سایت‌های حرفه‌ای و ریسپانسیو با جدیدترین تکنولوژی‌ها</p>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">5,500,000 تومان</div>
+                        <div class="text-sm text-blue-400">یا 24 قسط 255,000 تومانی</div>
+                    </div>
+                    
+                    <ul class="text-sm text-gray-300 mb-8 space-y-2">
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>طراحی ریسپانسیو</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>بهینه‌سازی SEO</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>پنل مدیریت کامل</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>پشتیبانی یک ساله</li>
+                    </ul>
+                    <button class="btn-primary w-full py-3 font-bold" onclick="showLoanOptions('website', 5500000)">
+                        <i class="fas fa-shopping-cart ml-2"></i>انتخاب و رزرو
+                    </button>
+                </div>
+                
+                <!-- Mobile App -->
+                <div class="netflix-card p-8 fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="service-icon mb-6">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">اپلیکیشن موبایل</h3>
+                    <p class="text-gray-300 mb-6">توسعه اپلیکیشن‌های حرفه‌ای برای اندروید و iOS</p>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">7,000,000 تومان</div>
+                        <div class="text-sm text-blue-400">یا 36 قسط 215,000 تومانی</div>
+                    </div>
+                    
+                    <ul class="text-sm text-gray-300 mb-8 space-y-2">
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>UI/UX مدرن و کاربرپسند</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>انتشار در استورها</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>بک‌اپ ابری</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>آپدیت‌های مجانی</li>
+                    </ul>
+                    <button class="btn-primary w-full py-3 font-bold" onclick="showLoanOptions('mobile', 7000000)">
+                        <i class="fas fa-shopping-cart ml-2"></i>انتخاب و رزرو
+                    </button>
+                </div>
+                
+                <!-- YouTube Marketing -->
+                <div class="netflix-card p-8 fade-in-up" style="animation-delay: 0.6s;">
+                    <div class="service-icon mb-6">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">بازاریابی یوتیوب</h3>
+                    <p class="text-gray-300 mb-6">مدیریت کانال یوتیوب و تولید محتوای ویدئویی</p>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">4,500,000 تومان</div>
+                        <div class="text-sm text-blue-400">یا 24 قسط 205,000 تومانی</div>
+                    </div>
+                    
+                    <ul class="text-sm text-gray-300 mb-8 space-y-2">
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>تولید ویدئوهای حرفه‌ای</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>بهینه‌سازی برای یوتیوب</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>افزایش بازدید و مشترک</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>کسب درآمد از یوتیوب</li>
+                    </ul>
+                    <button class="btn-primary w-full py-3 font-bold" onclick="showLoanOptions('youtube', 4500000)">
+                        <i class="fas fa-shopping-cart ml-2"></i>انتخاب و رزرو
+                    </button>
+                </div>
+                
+                <!-- Google Ads -->
+                <div class="netflix-card p-8 fade-in-up" style="animation-delay: 0.8s;">
+                    <div class="service-icon mb-6">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">تبلیغات گوگل</h3>
+                    <p class="text-gray-300 mb-6">مدیریت کمپین‌های تبلیغاتی گوگل ادز و افزایش ترافیک</p>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">3,800,000 تومان</div>
+                        <div class="text-sm text-blue-400">یا 24 قسط 175,000 تومانی</div>
+                    </div>
+                    
+                    <ul class="text-sm text-gray-300 mb-8 space-y-2">
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>تحقیق کلمات کلیدی</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>بهینه‌سازی کمپین</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>تحلیل رقبا</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>گزارش‌دهی مفصل</li>
+                    </ul>
+                    <button class="btn-primary w-full py-3 font-bold" onclick="showLoanOptions('google', 3800000)">
+                        <i class="fas fa-shopping-cart ml-2"></i>انتخاب و رزرو
+                    </button>
+                </div>
+                
+                <!-- Complete Package -->
+                <div class="netflix-card p-8 border-4 border-yellow-500 fade-in-up" style="animation-delay: 1s;">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-yellow-500 text-black px-4 py-2 rounded-full text-sm font-bold">
+                            <i class="fas fa-star ml-1"></i>ویژه
+                        </span>
+                    </div>
+                    <div class="service-icon bg-yellow-500 text-black mb-6">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">پکیج کامل</h3>
+                    <p class="text-gray-300 mb-6">تمام خدمات با تخفیف ویژه و پشتیبانی ۲۴ ساعته</p>
+                    
+                    <div class="mb-6">
+                        <div class="text-3xl font-bold text-green-400 mb-2">19,990,000 تومان</div>
+                        <div class="text-gray-400 line-through text-sm mb-2">27,000,000 تومان</div>
+                        <div class="text-sm text-blue-400">یا 36 قسط 610,000 تومانی</div>
+                    </div>
+                    
+                    <ul class="text-sm text-gray-300 mb-8 space-y-2">
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>تمام خدمات بالا</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>مشاوره رایگان</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>پشتیبانی اولویت‌دار</li>
+                        <li><i class="fas fa-check text-green-400 ml-2"></i>گارانتی بازگشت وجه</li>
+                    </ul>
+                    <button class="bg-yellow-500 text-black w-full py-3 font-bold rounded-lg hover:bg-yellow-400 transition" onclick="showLoanOptions('complete', 19990000)">
+                        <i class="fas fa-crown ml-2"></i>درخواست ویژه
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Mining -->
+    <div id="mining-page" class="page crypto-bg" style="padding-top: 80px;">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-20 fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-black gradient-text mb-8">استخراج ابری کریپتوکارنسی</h2>
+                <p class="text-xl text-gray-200 max-w-4xl mx-auto">
+                    با سرمایه‌گذاری در استخراج ابری Binance، درآمد ماهانه مطمئن و بالا کسب کنید. سیستم امن و قابل اعتماد با بازده تضمین شده.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <!-- Left Content -->
+                <div class="fade-in-up">
+                    <h3 class="text-4xl font-bold mb-10">چرا استخراج ابری؟</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="netflix-card p-6">
+                            <div class="flex items-start space-x-6 space-x-reverse">
+                                <div class="service-icon bg-green-500 text-white text-xl" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold mb-3">درآمد ماهانه ۱۵٪</h4>
+                                    <p class="text-gray-300 text-lg">با بازده تضمین شده و درآمد ماهانه ثابت، سرمایه شما همیشه در حال رشد است.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="netflix-card p-6">
+                            <div class="flex items-start space-x-6 space-x-reverse">
+                                <div class="service-icon bg-blue-500 text-white text-xl" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold mb-3">امنیت بالا</h4>
+                                    <p class="text-gray-300 text-lg">استفاده از پلتفرم معتبر Binance برای حداکثر امنیت و اعتماد.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="netflix-card p-6">
+                            <div class="flex items-start space-x-6 space-x-reverse">
+                                <div class="service-icon bg-purple-500 text-white text-xl" style="width: 60px; height: 60px; font-size: 1.5rem;">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-2xl font-bold mb-3">برداشت روزانه</h4>
+                                    <p class="text-gray-300 text-lg">امکان برداشت روزانه درآمد بدون محدودیت زمانی.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Calculator -->
+                <div class="netflix-card p-10 slide-in-right">
+                    <h4 class="text-3xl font-bold mb-8 text-center gradient-text">شبیه‌ساز درآمد</h4>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <label class="block text-lg font-medium mb-3">مبلغ سرمایه‌گذاری (تومان)</label>
+                            <input type="number" id="investment" class="form-input" placeholder="10000000" value="10000000">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-lg font-medium mb-3">مدت زمان (ماه)</label>
+                            <input type="number" id="period" class="form-input" placeholder="12" value="12">
+                        </div>
+                        
+                        <button onclick="calculateProfit()" class="btn-primary w-full py-4 font-bold text-xl">
+                            <i class="fas fa-calculator ml-2"></i>محاسبه سود
+                        </button>
+                        
+                        <div class="netflix-card p-6 border border-gray-700">
+                            <h5 class="text-2xl font-bold mb-6 text-center text-yellow-400">نتایج محاسبه:</h5>
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center text-lg">
+                                    <span>درآمد ماهانه:</span>
+                                    <span id="monthly-profit" class="font-bold text-green-400">1,500,000 تومان</span>
+                                </div>
+                                <div class="flex justify-between items-center text-lg">
+                                    <span>کل درآمد:</span>
+                                    <span id="total-profit" class="font-bold text-green-400">18,000,000 تومان</span>
+                                </div>
+                                <div class="flex justify-between items-center text-lg">
+                                    <span>درصد بازده کل:</span>
+                                    <span id="total-return" class="font-bold text-yellow-400">180%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button class="btn-primary px-12 py-5 font-bold text-xl pulse-glow" onclick="showMiningLoan()">
+                                <i class="fas fa-rocket ml-2"></i>همین حالا شروع کنید
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mining Plans -->
+            <div class="mb-20">
+                <h3 class="text-4xl font-bold text-center mb-12 gradient-text">پلن‌های سرمایه‌گذاری</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Basic Plan -->
+                    <div class="netflix-card p-8 text-center fade-in-up">
+                        <div class="service-icon bg-blue-500 text-white mb-6">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">پلن مبتدی</h4>
+                        <div class="text-4xl font-black mb-2 gradient-text">5,000,000</div>
+                        <div class="text-lg mb-2">تومان</div>
+                        <div class="text-sm text-blue-400 mb-6">یا 24 قسط 235,000 تومانی</div>
+                        <div class="text-xl font-bold text-green-300 mb-6">درآمد ماهانه: 750,000 تومان</div>
+                        <button class="btn-primary w-full py-3" onclick="showLoanOptions('mining-basic', 5000000)">انتخاب پلن</button>
+                    </div>
+                    
+                    <!-- Standard Plan -->
+                    <div class="netflix-card p-8 text-center border-2 border-yellow-500 fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-bold">محبوب</span>
+                        </div>
+                        <div class="service-icon bg-green-500 text-white mb-6">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">پلن استاندارد</h4>
+                        <div class="text-4xl font-black mb-2 gradient-text">20,000,000</div>
+                        <div class="text-lg mb-2">تومان</div>
+                        <div class="text-sm text-blue-400 mb-6">یا 36 قسط 610,000 تومانی</div>
+                        <div class="text-xl font-bold text-green-300 mb-6">درآمد ماهانه: 3,000,000 تومان</div>
+                        <button class="bg-yellow-500 text-black w-full py-3 font-bold rounded-lg" onclick="showLoanOptions('mining-standard', 20000000)">انتخاب پلن</button>
+                    </div>
+                    
+                    <!-- VIP Plan -->
+                    <div class="netflix-card p-8 text-center fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="service-icon bg-purple-500 text-white mb-6">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4">پلن VIP</h4>
+                        <div class="text-4xl font-black mb-2 gradient-text">50,000,000</div>
+                        <div class="text-lg mb-2">تومان</div>
+                        <div class="text-sm text-blue-400 mb-6">یا 36 قسط 1,525,000 تومانی</div>
+                        <div class="text-xl font-bold text-green-300 mb-6">درآمد ماهانه: 8,500,000 تومان</div>
+                        <button class="btn-primary w-full py-3" onclick="showLoanOptions('mining-vip', 50000000)">انتخاب پلن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Dashboard -->
+    <div id="dashboard-page" class="page" style="padding-top: 80px;">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-20 fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-black gradient-text mb-8">داشبورد درآمد</h2>
+                <p class="text-xl text-gray-200 max-w-4xl mx-auto">
+                    آمار کامل و تحلیل دقیق از عملکرد سرمایه‌گذاری و پروژه‌های شما
+                </p>
+            </div>
+            
+            <!-- Stats Overview -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+                <div class="netflix-card p-8 text-center fade-in-up">
+                    <i class="fas fa-coins text-6xl text-yellow-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">کل درآمد</h3>
+                    <div class="stats-counter text-3xl font-bold mb-2" id="totalEarnings">2,580,000</div>
+                    <div class="text-lg text-gray-300">تومان</div>
+                </div>
+                
+                <div class="netflix-card p-8 text-center fade-in-up" style="animation-delay: 0.2s;">
+                    <i class="fas fa-chart-line text-6xl text-green-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">درآمد امروز</h3>
+                    <div class="stats-counter text-3xl font-bold mb-2" id="todayEarnings">86,000</div>
+                    <div class="text-lg text-gray-300">تومان</div>
+                </div>
+                
+                <div class="netflix-card p-8 text-center fade-in-up" style="animation-delay: 0.4s;">
+                    <i class="fas fa-users text-6xl text-blue-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">مشتریان فعال</h3>
+                    <div class="stats-counter text-3xl font-bold mb-2" id="activeClients">1,247</div>
+                    <div class="text-lg text-gray-300">نفر</div>
+                </div>
+                
+                <div class="netflix-card p-8 text-center fade-in-up" style="animation-delay: 0.6s;">
+                    <i class="fas fa-project-diagram text-6xl text-purple-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">پروژه‌های فعال</h3>
+                    <div class="stats-counter text-3xl font-bold mb-2" id="activeProjects">89</div>
+                    <div class="text-lg text-gray-300">پروژه</div>
+                </div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 mb-20">
+                <!-- Revenue Chart -->
+                <div class="netflix-card p-8 fade-in-up">
+                    <h3 class="text-2xl font-bold mb-8">نمودار درآمد ماهانه</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Service Distribution -->
+                <div class="netflix-card p-8 fade-in-up" style="animation-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold mb-8">توزیع درآمد بر اساس خدمات</h3>
+                    <div class="chart-container">
+                        <canvas id="serviceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Transactions -->
+            <div class="netflix-card p-10 fade-in-up">
+                <h3 class="text-3xl font-bold mb-8">آخرین تراکنش‌ها</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b-2 border-gray-700">
+                                <th class="text-right py-4 px-6 text-lg font-bold">تاریخ</th>
+                                <th class="text-right py-4 px-6 text-lg font-bold">نوع خدمت</th>
+                                <th class="text-right py-4 px-6 text-lg font-bold">مشتری</th>
+                                <th class="text-right py-4 px-6 text-lg font-bold">مبلغ</th>
+                                <th class="text-right py-4 px-6 text-lg font-bold">وضعیت</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-800 hover:bg-gray-800 transition">
+                                <td class="py-4 px-6">1403/08/15</td>
+                                <td class="py-4 px-6">استخراج ابری - پلن VIP</td>
+                                <td class="py-4 px-6">علی محمدی</td>
+                                <td class="py-4 px-6 text-green-400 font-bold">+8,500,000 تومان</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-green-500 px-4 py-2 rounded-full text-sm font-bold">تکمیل</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800 hover:bg-gray-800 transition">
+                                <td class="py-4 px-6">1403/08/15</td>
+                                <td class="py-4 px-6">تبلیغات اینستاگرام</td>
+                                <td class="py-4 px-6">فاطمه احمدی</td>
+                                <td class="py-4 px-6 text-green-400 font-bold">+6,000,000 تومان</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-green-500 px-4 py-2 rounded-full text-sm font-bold">تکمیل</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-gray-800 hover:bg-gray-800 transition">
+                                <td class="py-4 px-6">1403/08/14</td>
+                                <td class="py-4 px-6">طراحی سایت</td>
+                                <td class="py-4 px-6">حسن رضایی</td>
+                                <td class="py-4 px-6 text-green-400 font-bold">+5,500,000 تومان</td>
+                                <td class="py-4 px-6">
+                                    <span class="bg-yellow-500 px-4 py-2 rounded-full text-sm font-bold">در حال اجرا</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Contact -->
+    <div id="contact-page" class="page" style="padding-top: 80px;">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-20 fade-in-up">
+                <h2 class="text-5xl md:text-7xl font-black gradient-text mb-8">تماس با ما</h2>
+                <p class="text-xl text-gray-200 max-w-4xl mx-auto">
+                    آماده همکاری و پاسخ‌گویی به سوالات شما هستیم. تیم حرفه‌ای ما در خدمت شماست.
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 mb-20">
+                <!-- Contact Info -->
+                <div class="fade-in-up">
+                    <h3 class="text-4xl font-bold mb-10">اطلاعات تماس</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="netflix-card p-8 flex items-center space-x-6 space-x-reverse">
+                            <div class="service-icon bg-blue-500 text-white" style="width: 60px; height: 60px;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold mb-2">تلفن تماس</h4>
+                                <p class="text-gray-300 text-lg">021-88776655</p>
+                            </div>
+                        </div>
+                        
+                        <div class="netflix-card p-8 flex items-center space-x-6 space-x-reverse">
+                            <div class="service-icon bg-green-500 text-white" style="width: 60px; height: 60px;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold mb-2">ایمیل</h4>
+                                <p class="text-gray-300 text-lg">info@maxnet.ir</p>
+                            </div>
+                        </div>
+                        
+                        <div class="netflix-card p-8 flex items-center space-x-6 space-x-reverse">
+                            <div class="service-icon bg-red-500 text-white" style="width: 60px; height: 60px;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold mb-2">آدرس دفتر مرکزی</h4>
+                                <p class="text-gray-300 text-lg">تهران، خیابان ولیعصر، پلاک 123</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="netflix-card p-10 slide-in-right">
+                    <h3 class="text-4xl font-bold mb-10 gradient-text text-center">ارسال پیام</h3>
+                    
+                    <form class="space-y-8" id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-lg font-medium mb-3">نام و نام خانوادگی *</label>
+                                <input type="text" required class="form-input" placeholder="نام خود را وارد کنید">
+                            </div>
+                            <div>
+                                <label class="block text-lg font-medium mb-3">شماره تماس *</label>
+                                <input type="tel" required class="form-input" placeholder="09123456789">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-lg font-medium mb-3">ایمیل</label>
+                            <input type="email" class="form-input" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-lg font-medium mb-3">موضوع *</label>
+                            <select required class="form-input">
+                                <option value="">انتخاب کنید</option>
+                                <option value="services">سوال در مورد خدمات</option>
+                                <option value="mining">استعلام استخراج ابری</option>
+                                <option value="loan">سوال در مورد وام</option>
+                                <option value="support">درخواست پشتیبانی</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-lg font-medium mb-3">توضیحات تکمیلی *</label>
+                            <textarea rows="6" required class="form-input" placeholder="لطفاً درخواست خود را به تفصیل بنویسید..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full py-5 font-bold text-xl pulse-glow">
+                            <i class="fas fa-paper-plane ml-3"></i>ارسال درخواست
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loan Options Modal -->
+    <div id="loanModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center">
+        <div class="netflix-card p-8 max-w-2xl w-full mx-4 max-h-96 overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-3xl font-bold gradient-text">انتخاب نحوه پرداخت</h3>
+                <button onclick="closeLoanModal()" class="text-white hover:text-red-500 text-2xl">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <!-- Service Info -->
+            <div id="serviceInfo" class="mb-8">
+                <!-- Dynamic content -->
+            </div>
+            
+            <!-- Payment Options -->
+            <div class="space-y-6">
+                <h4 class="text-2xl font-bold mb-4">نحوه پرداخت را انتخاب کنید:</h4>
+                
+                <!-- Cash Payment -->
+                <div class="loan-option" onclick="selectPaymentMethod('cash')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-money-bill-wave text-2xl text-green-400 ml-4"></i>
+                            <div>
+                                <h5 class="text-xl font-bold">پرداخت نقدی</h5>
+                                <p class="text-gray-300">پرداخت کامل و یکجا</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div id="cashAmount" class="text-xl font-bold text-green-400"></div>
+                            <div class="text-sm text-blue-400">بدون هزینه اضافی</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 24 Month Loan -->
+                <div class="loan-option" onclick="selectPaymentMethod('loan24')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-credit-card text-2xl text-blue-400 ml-4"></i>
+                            <div>
+                                <h5 class="text-xl font-bold">وام 24 ماهه</h5>
+                                <p class="text-gray-300">بدون بهره و بدون ضامن</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div id="loan24Amount" class="text-xl font-bold text-blue-400"></div>
+                            <div class="text-sm text-gray-300">×24 قسط ماهانه</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 36 Month Loan -->
+                <div class="loan-option" onclick="selectPaymentMethod('loan36')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <i class="fas fa-calendar-alt text-2xl text-purple-400 ml-4"></i>
+                            <div>
+                                <h5 class="text-xl font-bold">وام 36 ماهه</h5>
+                                <p class="text-gray-300">اقساط کمتر، مدت بیشتر</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div id="loan36Amount" class="text-xl font-bold text-purple-400"></div>
+                            <div class="text-sm text-gray-300">×36 قسط ماهانه</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Loan Benefits -->
+            <div class="installment-info mt-8">
+                <h5 class="text-xl font-bold mb-4 text-yellow-400">
+                    <i class="fas fa-star ml-2"></i>
+                    مزایای سیستم وام مکس نت
+                </h5>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-400 ml-2"></i>
+                        <span>بدون بهره و کارمزد</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-400 ml-2"></i>
+                        <span>تایید فوری در عرض 24 ساعت</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-400 ml-2"></i>
+                        <span>بدون نیاز به ضامن</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check text-green-400 ml-2"></i>
+                        <span>شروع پروژه بدون انتظار</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Confirm Button -->
+            <div class="mt-8 text-center">
+                <button id="confirmPayment" class="btn-primary px-12 py-4 text-xl font-bold" disabled onclick="confirmPayment()">
+                    <i class="fas fa-lock ml-2"></i>تایید و ادامه
+                </button>
+                <p class="text-sm text-gray-400 mt-4">با تایید، شما شرایط و قوانین را می‌پذیرید</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-20 px-6 border-t-2 border-gray-800">
+        <div class="container mx-auto text-center">
+            <div class="text-6xl font-black gradient-text mb-8 floating">مکس نت</div>
+            <p class="text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                پیشرو در ارائه خدمات دیجیتال مارکتینگ و سرمایه‌گذاری در استخراج ابری کریپتوکارنسی
+            </p>
+            
+            <div class="flex justify-center space-x-8 space-x-reverse mb-12">
+                <a href="#" class="text-gray-400 hover:text-white text-3xl transition">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-3xl transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-3xl transition">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-white text-3xl transition">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            
+            <div class="border-t-2 border-gray-800 pt-8">
+                <p class="text-gray-500 text-lg">
+                    © 2025 مکس نت. تمامی حقوق محفوظ است.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Navigation System
+        let currentPage = 'home';
+        
+        function showPage(pageName) {
+            // Hide current page
+            const currentPageElement = document.getElementById(currentPage + '-page');
+            if (currentPageElement) {
+                currentPageElement.classList.remove('active');
+            }
+            
+            // Show new page
+            setTimeout(() => {
+                const newPageElement = document.getElementById(pageName + '-page');
+                if (newPageElement) {
+                    newPageElement.classList.add('active');
+                    currentPage = pageName;
+                    
+                    // Update navigation
+                    updateNavigation(pageName);
+                    
+                    // Initialize page specific functions
+                    initializePage(pageName);
+                }
+            }, 300);
+            
+            // Close mobile menu
+            closeMobileMenu();
+        }
+        
+        function updateNavigation(activePage) {
+            // Desktop navigation
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Mobile navigation
+            document.querySelectorAll('.mobile-nav-item').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to current page links
+            const activeLinks = document.querySelectorAll(`[onclick="showPage('${activePage}')"]`);
+            activeLinks.forEach(link => {
+                link.classList.add('active');
+            });
+        }
+        
+        function initializePage(pageName) {
+            switch(pageName) {
+                case 'dashboard':
+                    initCharts();
+                    break;
+                case 'mining':
+                    calculateProfit();
+                    break;
+                case 'home':
+                    animateCounters();
+                    break;
+            }
+        }
+        
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        function closeMobileMenu() {
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+        
+        // Loan System
+        let currentService = '';
+        let currentAmount = 0;
+        let selectedPaymentMethod = '';
+        
+        function showLoanOptions(service, amount) {
+            currentService = service;
+            currentAmount = amount;
+            
+            // Update service info
+            const serviceNames = {
+                'instagram': 'تبلیغات اینستاگرام',
+                'website': 'طراحی سایت',
+                'mobile': 'اپلیکیشن موبایل',
+                'youtube': 'بازاریابی یوتیوب',
+                'google': 'تبلیغات گوگل',
+                'complete': 'پکیج کامل',
+                'mining-basic': 'استخراج ابری - پلن مبتدی',
+                'mining-standard': 'استخراج ابری - پلن استاندارد',
+                'mining-vip': 'استخراج ابری - پلن VIP'
+            };
+            
+            document.getElementById('serviceInfo').innerHTML = `
+                <div class="netflix-card p-6 border border-red-500">
+                    <h4 class="text-2xl font-bold text-center mb-2">${serviceNames[service]}</h4>
+                    <p class="text-center text-gray-300">قیمت کل: ${amount.toLocaleString()} تومان</p>
+                </div>
+            `;
+            
+            // Calculate installments
+            const loan24 = Math.ceil(amount / 24);
+            const loan36 = Math.ceil(amount / 36);
+            
+            document.getElementById('cashAmount').textContent = amount.toLocaleString() + ' تومان';
+            document.getElementById('loan24Amount').textContent = loan24.toLocaleString() + ' تومان';
+            document.getElementById('loan36Amount').textContent = loan36.toLocaleString() + ' تومان';
+            
+            // Show modal
+            document.getElementById('loanModal').classList.remove('hidden');
+            document.getElementById('loanModal').classList.add('flex');
+        }
+        
+        function showMiningLoan() {
+            const investment = parseFloat(document.getElementById('investment').value) || 10000000;
+            showLoanOptions('mining-custom', investment);
+        }
+        
+        function closeLoanModal() {
+            document.getElementById('loanModal').classList.add('hidden');
+            document.getElementById('loanModal').classList.remove('flex');
+            selectedPaymentMethod = '';
+            
+            // Reset selections
+            document.querySelectorAll('.loan-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            document.getElementById('confirmPayment').disabled = true;
+        }
+        
+        function selectPaymentMethod(method) {
+            selectedPaymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.loan-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            event.currentTarget.classList.add('selected');
+            document.getElementById('confirmPayment').disabled = false;
+        }
+        
+        function confirmPayment() {
+            if (!selectedPaymentMethod) return;
+            
+            let message = '';
+            switch(selectedPaymentMethod) {
+                case 'cash':
+                    message = `درخواست پرداخت نقدی ${currentAmount.toLocaleString()} تومان برای ${currentService} ثبت شد.`;
+                    break;
+                case 'loan24':
+                    const loan24 = Math.ceil(currentAmount / 24);
+                    message = `درخواست وام 24 ماهه با قسط ${loan24.toLocaleString()} تومانی برای ${currentService} ثبت شد.`;
+                    break;
+                case 'loan36':
+                    const loan36 = Math.ceil(currentAmount / 36);
+                    message = `درخواست وام 36 ماهه با قسط ${loan36.toLocaleString()} تومانی برای ${currentService} ثبت شد.`;
+                    break;
+            }
+            
+            showNotification(message + ' کارشناس ما با شما تماس خواهد گرفت.');
+            closeLoanModal();
+        }
+        
+        // Notification System
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notificationText');
+            notificationText.textContent = message;
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 5000);
+        }
+        
+        // Mining Calculator
+        function calculateProfit() {
+            const investment = parseFloat(document.getElementById('investment').value) || 0;
+            const period = parseInt(document.getElementById('period').value) || 0;
+            
+            const monthlyRate = 0.15; // 15% monthly
+            const monthlyProfit = investment * monthlyRate;
+            const totalProfit = monthlyProfit * period;
+            const totalReturn = (totalProfit / investment) * 100;
+            
+            document.getElementById('monthly-profit').textContent = monthlyProfit.toLocaleString() + ' تومان';
+            document.getElementById('total-profit').textContent = totalProfit.toLocaleString() + ' تومان';
+            document.getElementById('total-return').textContent = totalReturn.toFixed(0) + '%';
+        }
+        
+        // Counter Animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 20);
+        }
+        
+        function animateCounters() {
+            const counters = [
+                { id: 'clients', target: 5000 },
+                { id: 'projects', target: 12000 },
+                { id: 'income', target: 850 },
+                { id: 'years', target: 5 }
+            ];
+            
+            counters.forEach(counter => {
+                const element = document.getElementById(counter.id);
+                if (element) {
+                    animateCounter(element, counter.target);
+                }
+            });
+        }
+        
+        // Initialize Charts
+        function initCharts() {
+            // Revenue Chart
+            const revenueCtx = document.getElementById('revenueChart');
+            if (revenueCtx) {
+                new Chart(revenueCtx.getContext('2d'), {
+                    type: 'line',
+                    data: {
+                        labels: ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور'],
+                        datasets: [{
+                            label: 'درآمد (میلیون تومان)',
+                            data: [45, 72, 86, 91, 105, 134],
+                            borderColor: '#e50914',
+                            backgroundColor: 'rgba(229, 9, 20, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                labels: { color: '#ffffff' }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#ffffff' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            },
+                            x: {
+                                ticks: { color: '#ffffff' },
+                                grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Service Chart
+            const serviceCtx = document.getElementById('serviceChart');
+            if (serviceCtx) {
+                new Chart(serviceCtx.getContext('2d'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['استخراج ابری', 'تبلیغات اینستاگرام', 'طراحی سایت', 'اپلیکیشن موبایل', 'سایر'],
+                        datasets: [{
+                            data: [40, 25, 15, 12, 8],
+                            backgroundColor: ['#e50914', '#ffd700', '#00d4aa', '#667eea', '#764ba2']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: '#ffffff' }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showNotification('فرم با موفقیت ارسال شد! به زودی با شما تماس می‌گیریم.');
+            setTimeout(() => {
+                e.target.reset();
+            }, 2000);
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize home page
+            initializePage('home');
+            
+            // Initial calculator calculation
+            calculateProfit();
+            
+            // Close modal when clicking outside
+            document.getElementById('loanModal').addEventListener('click', (e) => {
+                if (e.target.id === 'loanModal') {
+                    closeLoanModal();
+                }
+            });
+            
+            // Welcome notification
+            setTimeout(() => {
+                showNotification('به مکس نت خوش آمدید! همین حالا خدمات را با امکان پرداخت اقساطی بررسی کنید.');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
