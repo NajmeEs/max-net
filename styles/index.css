@@ -1,5 +1,24 @@
 
-        
+        :root{
+            --main-color:rgb(254, 186, 23);
+            --main-color-rgb:254, 186, 23;
+
+            --secondary-color:rgb(84, 9, 218);
+            --secondary-color-rgb:84, 9, 218;
+
+            --third-color:rgb(4, 120, 87);
+            --third-color-rgb:4, 120, 87;
+
+            --back-dark:rgb(15, 13, 31);
+            --back-dark-rgb:15, 13, 31;
+
+            --back-light:rgb(244, 246, 255);
+            --back-light-rgb:244, 246, 255;
+
+            --attention:rgb(249, 39, 39);
+            --attention-rgb:249,39, 39;
+
+        }
         * {
             font-family: 'Vazir', sans-serif;
             box-sizing: border-box;
@@ -8,21 +27,18 @@
         }
         
         body {
-            background: linear-gradient(135deg, #141414 0%, #000000 50%, #1a1a1a 100%);
-            color: #ffffff;
+            background: var(--back-light);
+            color: var(--back-dark);
             overflow-x: hidden;
             line-height: 1.6;
         }
         
         /* Netflix-like Styles */
-        .netflix-red {
-            background: linear-gradient(135deg, #e50914 0%, #b81d24 50%, #831a20 100%);
-        }
         
         .netflix-card {
-            background: rgba(20, 20, 20, 0.95);
+            background: rgba(var(--back-dark-rgb), 0.95);
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(var(--back-light-rgb), 0.1);
             border-radius: 12px;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             overflow: hidden;
@@ -30,12 +46,12 @@
         
         .netflix-card:hover {
             transform: scale(1.05) translateY(-10px);
-            box-shadow: 0 25px 50px rgba(229, 9, 20, 0.4);
-            border-color: #e50914;
+            box-shadow: 0 25px 50px rgba(var(--third-color-rgb), 0.4);
+            border-color:var(--main-color);
         }
         
         .gradient-text {
-            background: linear-gradient(45deg, #e50914, #ffffff, #e50914);
+            background: var(--main-color);
             background-size: 400% 400%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -70,9 +86,9 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(20, 20, 20, 0.95);
+            background: rgba(var(--back-dark-rgb), 0.95);
             backdrop-filter: blur(25px);
-            border-bottom: 2px solid rgba(229, 9, 20, 0.3);
+            border-bottom: 2px solid rgba(var(--third-color-rgb), 0.3);
             padding: 15px 0;
         }
         
@@ -81,14 +97,14 @@
             padding: 12px 24px;
             border-radius: 8px;
             transition: all 0.3s ease;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(var(--back-light-rgb), 0.8);
             text-decoration: none;
             font-weight: 500;
         }
         
         .nav-link:hover, .nav-link.active {
-            background: rgba(229, 9, 20, 0.2);
-            color: #ffffff;
+            background: rgba(var(--third-color-rgb), 0.2);
+            color: var(--back-light);
             transform: translateY(-2px);
         }
         
@@ -99,7 +115,7 @@
             right: 50%;
             width: 0;
             height: 2px;
-            background: #e50914;
+            background: var(--attention);
             transition: all 0.3s ease;
         }
         
@@ -119,7 +135,7 @@
         .hamburger span {
             width: 25px;
             height: 3px;
-            background: #ffffff;
+            background: var(--back-light);
             margin: 3px 0;
             transition: all 0.3s ease;
             border-radius: 2px;
@@ -127,7 +143,7 @@
         
         .hamburger.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
-            background: #e50914;
+            background: var(--attention);
         }
         
         .hamburger.active span:nth-child(2) {
@@ -136,7 +152,7 @@
         
         .hamburger.active span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, -6px);
-            background: #e50914;
+            background: var(--attention);
         }
         
         /* Mobile Menu */
@@ -146,7 +162,7 @@
             right: -100%;
             width: 100%;
             height: calc(100vh - 80px);
-            background: rgba(20, 20, 20, 0.98);
+            background: rgba(var(--secondary-color), 0.98);
             backdrop-filter: blur(30px);
             z-index: 999;
             transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
