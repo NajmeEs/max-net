@@ -18,31 +18,49 @@
         <span id="notificationText">درخواست شما با موفقیت ارسال شد!</span>
     </div>
 
+    <header class="header">
+        <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-3xl font-black gradient-text floating">مکس نت</div>
+                </div>
+    </header>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container mx-auto px-6">
             <div class="flex justify-between items-center">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="text-3xl font-black gradient-text floating">مکس نت</div>
-                </div>
+                
                 
                 <!-- Desktop Navigation -->
                 <div class="desktop-nav flex items-center space-x-8 space-x-reverse">
                     <a href="#" onclick="showPage('home')" class="nav-link active">
-                        <i class="fas fa-home ml-2"></i>خانه
+                        <i class="fas fa-home ml-2"></i>صفحه اصلی
                     </a>
                     <a href="#" onclick="showPage('services')" class="nav-link">
                         <i class="fas fa-cogs ml-2"></i>خدمات
                     </a>
+                    <a href="#" onclick="showPage('#')" class="nav-link">
+                        <i class="fas fa-cogs ml-2"></i>سرمایه گذاری
+                    </a>
                     <a href="#" onclick="showPage('mining')" class="nav-link">
                         <i class="fas fa-coins ml-2"></i>استخراج ابری
+                    </a>
+                    <a href="#" onclick="showPage('#')" class="nav-link">
+                        <i class="fas fa-coins ml-2"></i>دریافت وام
+                    </a>
+                    <a href="#" onclick="showPage('#')" class="nav-link">
+                        <i class="fas fa-coins ml-2"></i>دریافت جایزه
+                    </a>
+                    <a href="#" onclick="showPage('#')" class="nav-link">
+                        <i class="fas fa-coins ml-2"></i>تبلیغات
+                    </a>
+                    <a href="#" onclick="showPage('#')" class="nav-link">
+                        <i class="fas fa-coins ml-2"></i>شرایط و ضوابط
                     </a>
                     <a href="#" onclick="showPage('dashboard')" class="nav-link">
                         <i class="fas fa-chart-line ml-2"></i>داشبورد
                     </a>
                     <a href="#" onclick="showPage('contact')" class="nav-link">
-                        <i class="fas fa-phone ml-2"></i>تماس
+                        <i class="fas fa-phone ml-2"></i>تماس با ما
                     </a>
                 </div>
                 
@@ -76,7 +94,7 @@
     </div>
 
     <!-- Page 1: Home -->
-    <div id="home-page" class="page active hero-bg" style="padding-top: 80px;">
+    <div id="home-page" class="page active" style="background-image: url(styles/back.jpg); background-repeat: no-repeat; background-size:cover;">
         <div class="container mx-auto px-6 text-center py-20">
             <div class="max-w-6xl mx-auto">
                 <h1 class="text-6xl md:text-8xl font-black mb-8 gradient-text floating fade-in-up">مکس نت</h1>
